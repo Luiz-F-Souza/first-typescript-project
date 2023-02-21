@@ -1,0 +1,77 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.808);
+}
+
+#app{
+  width: 50%;
+  min-width: 40rem;
+  margin-inline: auto;
+  border: 1px solid white;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+#app .new_to_do_form{
+  border-bottom: white;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid white;
+}
+
+#app .new_to_do_form .new_to_do_input{
+  padding: .5rem;
+  flex:1;
+}
+
+#app .to_do_container .to_to_list_title{
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+#app .to_do_container .to_do_item_container {
+  display: flex;
+  flex: 1;
+  padding: 1rem 0 1rem 0;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px dashed white;
+}
+
+#app .to_do_container .to_do_item_container .to_do_item_checkbox{
+  width: 2rem;
+  height: 2rem;
+}
+
+#app .to_do_container .to_do_item_container .to_do_item_description{
+  flex: 1;
+  font-size: 1.6rem;
+  color: white;
+}
+
+#app .to_do_container .to_do_item_container:has(.to_do_item_checkbox:checked) .to_do_item_description{
+  text-decoration:line-through 2.5px rgba(0, 51, 255, 0.825);
+}
+
+#app .to_do_container .to_do_item_container .to_do_delete_btn{
+  background-color: transparent;
+  border: none;
+  color: white;
+  width: 4rem;
+  height: 4rem;
+}
